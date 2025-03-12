@@ -1,0 +1,26 @@
+"use client";
+
+import React, { useState } from "react";
+
+export default function NavBar() {
+  const [activeTab, setActiveTab] = useState("All");
+
+  // Espace commentaire pour Loris esclave qui m'aide
+  //
+
+  return (
+    <div className="w-fit bg-white/50 rounded-full p-2 my-6 flex space-x-4">
+      {["All", "About", "Work"].map((item) => (
+        <div
+          key={item}
+          className={`w-32 cursor-pointer text-center text-black border-2 border-transparent rounded-full px-4 py-2 ${
+            activeTab === item ? "border-white bg-white" : "text-gray-400"
+          } transition-all duration-300`}
+          onClick={() => setActiveTab(item)}
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+  );
+}
