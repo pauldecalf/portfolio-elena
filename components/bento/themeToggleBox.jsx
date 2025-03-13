@@ -18,7 +18,7 @@ export const ThemeToggleBox = () => {
   };
 
   return (
-    <BentoBox onClick={toggleTheme} className="flex items-center justify-center">
+    <BentoBox onClick={toggleTheme} className="h-full flex items-center justify-center">
       {darkMode ? (
         <div className="flex items-center">
           <SunIcon className="h-6 w-6 mr-2" />

@@ -28,14 +28,18 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
           <ProfileBox />
 
-          <BentoBox colSpan={2} className="flex flex-col justify-center">
+          {/* <BentoBox colSpan={2} className="flex flex-col justify-center">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
               Salut, je suis <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">Votre Nom</span>
             </h1>
             <p className="text-gray-700 dark:text-gray-300">Développeur web passionné par la création d'expériences digitales exceptionnelles.</p>
-          </BentoBox>
+          </BentoBox> */}
+          <MapBox />
 
-          <ThemeToggleBox />
+          <div className="flex flex-col h-full justify-between gap-4">
+            <MapBox />
+            <ThemeToggleBox />
+          </div>
         </div>
 
         {/* Deuxième section - Projets et infos */}
