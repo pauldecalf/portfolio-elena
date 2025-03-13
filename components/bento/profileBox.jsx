@@ -4,7 +4,7 @@ import BentoBox from "../bentoBox";
 
 export const ProfileBox = () => {
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2" colSpan={2}>
+    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
       <div className="flex items-center mb-4">
         <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden flex items-center justify-center mr-6">
           <Image src="/./images/me.jpeg" alt="Votre nom" width={110} height={110} />

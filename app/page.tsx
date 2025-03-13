@@ -3,12 +3,10 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/navBar";
 import BentoBox from "../components/bentoBox";
-import { ProfileBox, MapBox, ThemeToggleBox } from "../components/bento";
+import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox } from "../components/bento";
 
 export default function Home() {
-  // Configuration du thème au chargement
   useEffect(() => {
-    // Vérifier si un thème est stocké dans localStorage
     const storedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
@@ -37,7 +35,7 @@ export default function Home() {
           <MapBox />
 
           <div className="flex flex-col h-full justify-between gap-4">
-            <MapBox />
+            <ResumeBox />
             <ThemeToggleBox />
           </div>
         </div>
