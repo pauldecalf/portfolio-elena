@@ -4,8 +4,9 @@ const BentoBox = ({ children, className = "", colSpan = 1, rowSpan = 1, onClick 
   return (
     <div
       className={`
-        bg-white dark:bg-gray-800 
-        rounded-2xl shadow-md 
+        bg-white/60 dark:bg-gray-800
+        hover:bg-white 
+        rounded-3xl shadow-md 
         p-4 
         transition-all duration-300 ease-in-out
         ${onClick ? "hover:shadow-lg hover:scale-[1.01] cursor-pointer" : ""}

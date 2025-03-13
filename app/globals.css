@@ -33,6 +33,7 @@ body {
   font-family: "Silka", sans-serif;
 }
 
+/* BANNER */
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -41,7 +42,6 @@ body {
     transform: translateX(-50%);
   }
 }
-
 .animate-marquee {
   display: flex;
   animation: marquee 30s linear infinite;
