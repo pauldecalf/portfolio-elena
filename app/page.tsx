@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../components/navBar";
 import BentoBox from "../components/bentoBox";
-import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox } from "../components/bento";
+import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox } from "../components/bento";
 
 export default function Home() {
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Home() {
 
       <main className="w-11/12 max-w-6xl py-6">
         {/* Première section - Intro */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
           <ProfileBox />
 
           <div className="lg:col-span-2 md:col-span-2 flex flex-col gap-4">
@@ -48,7 +48,8 @@ export default function Home() {
         </div>
 
         {/* Deuxième section - Projets et infos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
           <MapBox />
 
           <BentoBox className="flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
@@ -57,6 +58,22 @@ export default function Home() {
               <p className="text-sm">pour de nouveaux projets</p>
             </div>
           </BentoBox>
+        </div> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6-4">
+          {/* <LinkedinBox /> */}
+          <div className="flex flex-col h-full justify-between gap-4">
+            <LinkedinBox />
+            <GithubBox />
+            <MailBox />
+          </div>
+
+          {/* <MapBox />
+
+          <div className="flex flex-col h-full justify-between gap-4">
+            <ResumeBox />
+            <ThemeToggleBox />
+          </div> */}
         </div>
       </main>
     </div>
