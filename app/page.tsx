@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import NavBar from "../components/navBar";
-import BentoBox from "../components/bentoBox";
 import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox } from "../components/bento";
 
 export default function Home() {

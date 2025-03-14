@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import BentoBox from "../bentoBox";
 
 import { InboxArrowDownIcon, EyeIcon } from "@heroicons/react/24/outline";
