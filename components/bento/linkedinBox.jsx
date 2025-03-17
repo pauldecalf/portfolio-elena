@@ -3,7 +3,7 @@ import BentoBox from "../bentoBox";
 
 export const LinkedinBox = () => {
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-1">
+    <BentoBox className="flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.01] cursor-pointer">
       <div className="flex justify-center items-center">
         <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank" rel="noreferrer">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-20 fill-gray-500 hover:fill-black cursor-pointer">

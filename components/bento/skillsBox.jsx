@@ -20,7 +20,7 @@ export const SkillsBox = () => {
 
   return (
     <BentoBox className="relative overflow-hidden py-5 md:col-span-2 h-full flex flex-col justify-between">
-      <div className="relative my-10 after:bg-[linear-gradient(90deg,rgba(255,0,0,1)0%,rgba(9,9,121,0)10%,rgba(4,112,189,0)90%,rgba(255,0,0,1)100%)] after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
+      <div className="relative my-10 after:bg-[linear-gradient(90deg,rgb(247,246,255)0%,rgba(9,9,121,0)20%,rgba(4,112,189,0)80%,rgb(247,246,255)100%)] after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
         <div className="animate-marquee flex whitespace-nowrap">
           {techLogos.concat(techLogos).map((logo, i) => (
             <div key={i} className="flex items-center mx-2 bg-gray-200 p-4 rounded-xl">

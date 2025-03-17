@@ -9,7 +9,6 @@ const BentoBox = ({ children, className = "", colSpan = 1, rowSpan = 1, onClick 
         rounded-3xl shadow-md 
         p-4 
         transition-all duration-300 ease-in-out
-        ${onClick ? "hover:shadow-lg hover:scale-[1.01] cursor-pointer" : ""}
         ${className}
         ${colSpan > 1 ? `md:col-span-${colSpan}` : ""}
         ${rowSpan > 1 ? `md:row-span-${rowSpan}` : ""}
