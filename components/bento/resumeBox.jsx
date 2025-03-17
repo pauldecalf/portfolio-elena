@@ -23,9 +23,9 @@ export const ResumeBox = () => {
       </div>
 
       <div className="flex justify-center items-center gap-8">
-        <InboxArrowDownIcon className="size-8 text-gray-500 hover:text-black cursor-pointer" onClick={handleDownload} />
+        <InboxArrowDownIcon className="size-8 text-gray-500 hover:text-black cursor-pointer duration-400 transition-all" onClick={handleDownload} />
         <a href={cvUrl} target="_blank" rel="noopener noreferrer">
-          <EyeIcon className="size-8 text-gray-500 hover:text-black" />
+          <EyeIcon className="size-8 text-gray-500 hover:text-black duration-400 transition-all" />
         </a>
       </div>
     </BentoBox>

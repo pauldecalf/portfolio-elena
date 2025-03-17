@@ -6,4 +6,5 @@ export { BannerBox } from "./bannerBox";
 export { LinkedinBox } from "./linkedinBox";
 export { GithubBox } from "./githubBox";
 export { MailBox } from "./mailBox";
+export { InstaBox } from "./instaBox";
 export { SkillsBox } from "./skillsBox";

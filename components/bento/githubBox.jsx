@@ -6,7 +6,7 @@ export const GithubBox = () => {
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.01] cursor-pointer">
       <div className="flex justify-center items-center">
         <a href="https://github.com/ElenaFerreira" target="_blank" rel="noreferrer">
-          <svg viewBox="0 0 98 96" className="size-18 fill-gray-500 hover:fill-black cursor-pointer">
+          <svg viewBox="0 0 98 96" className="size-18 fill-gray-500 hover:fill-black cursor-pointer duration-400 transition-all">
             <path
               fillRule="evenodd"
               clipRule="evenodd"

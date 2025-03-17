@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import NavBar from "../components/navBar";
-import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox, SkillsBox } from "../components/bento";
+import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox, SkillsBox, InstaBox } from "../components/bento";
 
 export default function Home() {
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="flex flex-col h-full justify-between gap-4">
             <LinkedinBox />
             <GithubBox />
-            <MailBox />
+            <InstaBox />
           </div>
 
           <div className="flex flex-col h-full justify-between gap-4 md:col-span-2 lg:col-span-2">
