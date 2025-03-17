@@ -16,7 +16,7 @@ export const ResumeBox = () => {
   };
 
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2" colSpan={2}>
+    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2">
       <div className="mb-4">
         <p className="text-lg text-gray-600 dark:text-gray-300">2025 CV</p>
         <h2 className="text-3xl font-bold mb-1">RESUME</h2>

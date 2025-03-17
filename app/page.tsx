@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import NavBar from "../components/navBar";
-import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox } from "../components/bento";
+import { ProfileBox, MapBox, ThemeToggleBox, ResumeBox, BannerBox, LinkedinBox, GithubBox, MailBox, SkillsBox } from "../components/bento";
 
 export default function Home() {
   useEffect(() => {
@@ -37,13 +37,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* <MapBox />
-
-          <div className="flex flex-col h-full justify-between gap-4">
-            <ResumeBox />
-            <ThemeToggleBox />
-          </div> */}
         </div>
 
         {/* Deuxième section - Projets et infos */}
@@ -67,12 +60,10 @@ export default function Home() {
             <MailBox />
           </div>
 
-          {/* <MapBox />
-
-          <div className="flex flex-col h-full justify-between gap-4">
-            <ResumeBox />
-            <ThemeToggleBox />
-          </div> */}
+          <div className="flex flex-col h-full justify-between gap-4 md:col-span-2 lg:col-span-2">
+            <SkillsBox />
+            <MailBox />
+          </div>
         </div>
       </main>
     </div>
