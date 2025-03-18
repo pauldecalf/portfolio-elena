@@ -54,17 +54,6 @@ export default function Home() {
 
         {/* Deuxième section */}
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
-          <MapBox />
-
-          <BentoBox className="flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-            <div className="text-center">
-              <h3 className="text-xl font-bold mb-1">Disponible</h3>
-              <p className="text-sm">pour de nouveaux projets</p>
-            </div>
-          </BentoBox>
-        </div> */}
-
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
           <div className="flex flex-col h-full justify-between gap-4">
             <LinkedinBox />

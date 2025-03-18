@@ -3,19 +3,22 @@ import BentoBox from "../bentoBox";
 
 export const SkillsBox = () => {
   const techLogos = [
-    "/images/tech/Bootstrap.png",
+    "/images/tech/nextjs.svg",
+    "/images/tech/react.svg",
+    "/images/tech/typescript.png",
+    "/images/tech/html.png",
+    "/images/tech/php.png",
+    "/images/tech/python.png",
     "/images/tech/css.png",
     "/images/tech/django.svg",
     "/images/tech/github.svg",
     "/images/tech/gitlab.png",
-    "/images/tech/html.png",
-    "/images/tech/php.png",
-    "/images/tech/python.png",
+    "/images/tech/vercel.svg",
     "/images/tech/sql.png",
     "/images/tech/symfony.svg",
     "/images/tech/Tailwind.png",
-    "/images/tech/typescript.png",
     "/images/tech/wordpress.png",
+    "/images/tech/Bootstrap.svg",
   ];
 
   return (
@@ -24,7 +27,7 @@ export const SkillsBox = () => {
         <div className="animate-marquee flex whitespace-nowrap">
           {techLogos.concat(techLogos).map((logo, i) => (
             <div key={i} className="flex items-center mx-2 bg-gray-200 p-4 rounded-xl">
-              <img src={logo} alt="Tech logo" className="size-10" />
+              <img src={logo} alt="Tech logo" className="size-10 object-contain" />
             </div>
           ))}
         </div>
