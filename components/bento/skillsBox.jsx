@@ -30,7 +30,7 @@ export const SkillsBox = () => {
         </div>
       </div>
       <div className="mb-4">
-        <p className="text-sm text-gray-600 dark:text-gray-300">CURRENTLY USING</p>
+        <p className="text-sm text-gray-600 dark:text-gray-300">STACK IN USE</p>
         <h2 className="text-2xl font-bold mb-1">TECH I ❤️</h2>
       </div>
     </BentoBox>

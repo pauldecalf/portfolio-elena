@@ -8,3 +8,4 @@ export { GithubBox } from "./githubBox";
 export { MailBox } from "./mailBox";
 export { InstaBox } from "./instaBox";
 export { SkillsBox } from "./skillsBox";
+export { ExperienceBox } from "./experienceBox";
