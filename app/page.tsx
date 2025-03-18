@@ -14,6 +14,7 @@ import {
   SkillsBox,
   InstaBox,
   ExperienceBox,
+  Project1Box,
 } from "../components/bento";
 
 export default function Home() {
@@ -64,7 +65,7 @@ export default function Home() {
           </BentoBox>
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
           <div className="flex flex-col h-full justify-between gap-4">
             <LinkedinBox />
             <GithubBox />
@@ -79,6 +80,11 @@ export default function Home() {
           <div className="flex flex-col h-full justify-between gap-4 md:col-span-3 lg:col-span-3">
             <ExperienceBox />
           </div>
+        </div>
+
+        {/* Troisième section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6-4">
+          <Project1Box />
         </div>
       </main>
     </div>
