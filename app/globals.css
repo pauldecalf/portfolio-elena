@@ -111,3 +111,24 @@ body {
   animation: marquee 40s linear infinite;
   width: max-content;
 }
+
+/* PULSER */
+.animation-pulser {
+  animation: pulser 2s infinite;
+}
+
+@keyframes pulser {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(0, 186, 11, 1);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 186, 11, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}

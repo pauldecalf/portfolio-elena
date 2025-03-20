@@ -6,8 +6,9 @@ export const ProfileBox = () => {
   return (
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
       <div className="flex items-center mb-4">
-        <div className="size-24 rounded-full overflow-hidden flex items-center justify-center mr-6">
-          <Image src="/images/me.jpeg" alt="Elena Ferreira" width={110} height={110} />
+        <div className="relative size-24 flex items-center justify-center mr-6">
+          <Image src="/images/me.jpeg" alt="Elena Ferreira" className="aspect-square rounded-full object-cover" width={110} height={110} />
+          <div className="absolute bottom-1.5 right-1.5 size-4 bg-[#00cb0e] rounded-full flex justify-center items-center animation-pulser"></div>
         </div>
 
         <div>
