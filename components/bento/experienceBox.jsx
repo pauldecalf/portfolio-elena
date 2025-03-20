@@ -13,8 +13,8 @@ export const ExperienceBox = () => {
         <div className="flex justify-between flex-col items-stretch md:flex-row md:items-center py-4 gap-3 md:gap-2">
           <h2 className="text-3xl font-bold text-title">Web Developer</h2>
           <div className="text-right">
-            <p className="font-bold text-sm text-subtitle">Grafikmente</p>
-            <p className="text-xs text-subtitle">2024 - Present</p>
+            <p className="font-bold text-sm text-title">Grafikmente</p>
+            <p className="text-xs text-title">2024 - Present</p>
           </div>
         </div>
 
