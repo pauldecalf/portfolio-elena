@@ -13,7 +13,7 @@ export const MapBox = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="absolute bottom-0 left-0 p-3 bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 rounded-tr-lg">
+      <div className="absolute bottom-0 left-0 p-3 bg-background/80 rounded-tr-lg">
         <p className="text-sm font-medium">Paris, France</p>
       </div>
     </BentoBox>

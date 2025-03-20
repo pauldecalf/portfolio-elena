@@ -23,18 +23,18 @@ export const SkillsBox = () => {
 
   return (
     <BentoBox className="relative overflow-hidden py-5 md:col-span-2 h-full flex flex-col justify-between">
-      <div className="relative my-10 after:bg-[linear-gradient(90deg,rgb(247,246,255)0%,rgba(9,9,121,0)20%,rgba(4,112,189,0)80%,rgb(247,246,255)100%)] after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
+      <div className="relative my-10 after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
         <div className="animate-marquee flex whitespace-nowrap">
           {techLogos.concat(techLogos).map((logo, i) => (
-            <div key={i} className="flex items-center mx-2 bg-gray-200 p-4 rounded-xl">
+            <div key={i} className="flex items-center mx-2 bg-skills p-4 rounded-xl">
               <img src={logo} alt="Tech logo" className="size-10 object-contain" />
             </div>
           ))}
         </div>
       </div>
       <div className="mb-4">
-        <p className="text-sm text-gray-600 dark:text-gray-300">STACK IN USE</p>
-        <h2 className="text-2xl font-bold mb-1">TECH I ❤️</h2>
+        <p className="text-sm text-subtitle">STACK IN USE</p>
+        <h2 className="text-2xl font-bold mb-1 text-title">TECH I ❤️</h2>
       </div>
     </BentoBox>
   );

@@ -18,14 +18,17 @@ export const ResumeBox = () => {
   return (
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-2">
       <div className="mb-4">
-        <p className="text-sm text-gray-600 dark:text-gray-300">2025 CV</p>
-        <h2 className="text-2xl font-bold mb-1">RESUME</h2>
+        <p className="text-sm text-subtitle">2025 CV</p>
+        <h2 className="text-2xl font-bold mb-1 text-title">RESUME</h2>
       </div>
 
       <div className="flex justify-center items-center gap-8">
-        <InboxArrowDownIcon className="size-8 text-gray-500 hover:text-black cursor-pointer duration-400 transition-all" onClick={handleDownload} />
-        <a href={cvUrl} target="_blank" rel="noopener noreferrer">
-          <EyeIcon className="size-8 text-gray-500 hover:text-black duration-400 transition-all" />
+        <InboxArrowDownIcon
+          className="size-8 text-icon-color hover:text-icon-hover cursor-pointer duration-400 transition-all"
+          onClick={handleDownload}
+        />
+        <a href={cvUrl} target="_blank">
+          <EyeIcon className="size-8 text-icon-color hover:text-icon-hover duration-400 transition-all" />
         </a>
       </div>
     </BentoBox>

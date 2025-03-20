@@ -2,19 +2,47 @@ import { useState, useEffect } from "react";
 import BentoBox from "../bentoBox";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
+const getStoredValue = (key, defaultValue) => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem(key) || defaultValue;
+  }
+  return defaultValue;
+};
+
 export const ThemeToggleBox = () => {
+  // const [darkMode, setDarkMode] = useState(false);
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     setDarkMode(document.documentElement.classList.contains("dark"));
+  //   }
+  // }, []);
+
+  // const toggleTheme = () => {
+  //   document.documentElement.classList.toggle("dark");
+  //   setDarkMode(!darkMode);
+  //   localStorage.setItem("theme", darkMode ? "light" : "dark");
+  // };
+
+  const [theme, setTheme] = useState("light");
+  const [isLoaded, setIsLoaded] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setDarkMode(document.documentElement.classList.contains("dark"));
-    }
+    setTheme(getStoredValue("theme", "light"));
+    setIsLoaded(true);
   }, []);
 
+  useEffect(() => {
+    if (isLoaded) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme, isLoaded]);
+
   const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     setDarkMode(!darkMode);
-    localStorage.setItem("theme", darkMode ? "light" : "dark");
   };
 
   return (

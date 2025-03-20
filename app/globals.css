@@ -1,21 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&: is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-body-1: var(--background-body1);
+  --color-background-body-2: var(--background-body2);
+  --color-background-hover: var(--background-hover);
+
+  --color-navbar: var(--navbar);
+  --color-navbar-text: var(--navbar-text);
+
+  --color-bento-border: var(--bento-border);
+
   --color-foreground: var(--foreground);
+  --color-icon-color: var(--icon-color);
+  --color-icon-hover: var(--icon-hover);
+  --color-fondu: var(--fondu);
+  --color-fondu-hover: var(--fondu-hover);
+  --color-skills: var(--skills);
+  --color-label: var(--label);
+  --color-title: var(--title);
+  --color-subtitle: var(--subtitle);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
-@media (prefers-color-scheme: dark) {
+@layer utilities {
   :root {
-    --background: #0a0a0a;
+    --background-body1: #e7e6ed;
+    --background-body2: #ffcaa7;
+
+    --background: #f7f5f1;
+    --foreground: #171717;
+    --background-hover: #f5efe9;
+
+    --navbar: #ffffff;
+    --navbar-text: #171717;
+
+    --bento-border: rgba(0, 0, 0, 0);
+
+    --title: #171717;
+    --subtitle: #7f7f7f;
+
+    --icon-color: #7f7f7f;
+    --icon-hover: #171717;
+
+    --skills: #e5e5e5;
+    --label: #315a72;
+
+    --primary: #87c5ea;
+    --secondary: #ffcaa7;
+  }
+
+  [data-theme="dark"] {
+    --background-body1: #1a202c;
+    --background-body2: #4d3585;
+
+    --background: #18191e;
     --foreground: #ededed;
+    --background-hover: #0e0f11;
+
+    --navbar: #323337;
+    --navbar-text: #ededed;
+
+    --bento-border: #323337;
+
+    --title: #ededed;
+    --subtitle: #9ca3af;
+
+    --icon-color: #9ca3af;
+    --icon-hover: #ededed;
+
+    --skills: #262626;
+    --label: #4d3585;
+
+    --primary: #4d3585;
+    --secondary: #1a202c;
   }
 }
 

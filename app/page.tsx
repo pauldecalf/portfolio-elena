@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col w-full justify-start items-center bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-900 dark:to-purple-900 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col w-full justify-start items-center bg-gradient-to-br from-background-body-1 to-background-body-2 transition-colors duration-300">
       <NavBar />
 
       <main className="w-11/12 max-w-6xl py-6">
