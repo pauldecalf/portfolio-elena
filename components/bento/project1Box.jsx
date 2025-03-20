@@ -9,13 +9,13 @@ export const Project1Box = () => {
         <img src="/images/project1.png" alt="Project image" className="w-full h-auto mb-4 object-cover rounded-lg" />
 
         <div className="flex items-center mb-2">
-          <p className="text-sm text-subtitle">PROJECT AT</p>
+          <p className="text-sm text-subtitle">PROJET CHEZ</p>
           <img src="/images/Grafikmente.svg" alt="Grafikmente Logo" className="size-5 mx-1" />
           <p className="text-sm text-subtitle">GRAFIKMENTE</p>
         </div>
 
         <div className="flex items-center">
-          <h2 className="text-2xl font-bold mb-1 text-title">Website Boulangers du Grand Paris</h2>
+          <h2 className="text-2xl font-bold mb-1 text-title">Site Web Boulangers du Grand Paris</h2>
           <a href="https://boulangersdugrandparis.com/accueil/" target="_blank" className="ml-2">
             <LinkIcon className="size-6 text-icon-color hover:text-icon-hover duration-400 transition-all" />
           </a>

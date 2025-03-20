@@ -10,3 +10,4 @@ export { InstaBox } from "./instaBox";
 export { SkillsBox } from "./skillsBox";
 export { ExperienceBox } from "./experienceBox";
 export { Project1Box } from "./project1Box";
+export { Project2Box } from "./project2Box";
