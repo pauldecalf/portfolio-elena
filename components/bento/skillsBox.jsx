@@ -22,7 +22,7 @@ export const SkillsBox = () => {
   ];
 
   return (
-    <BentoBox className="relative overflow-hidden py-5 md:col-span-2 h-full flex flex-col justify-between">
+    <BentoBox className="relative overflow-hidden p-5 md:col-span-2 h-full flex flex-col justify-between">
       <div className="relative my-10 after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
         <div className="animate-marquee flex whitespace-nowrap">
           {techLogos.concat(techLogos).map((logo, i) => (
