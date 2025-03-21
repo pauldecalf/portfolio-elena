@@ -11,7 +11,7 @@ export const SkillsBox = () => {
     "/images/tech/python.png",
     "/images/tech/css.png",
     "/images/tech/django.svg",
-    "/images/tech/github.svg",
+    "/images/tech/github-white.svg",
     "/images/tech/gitlab.png",
     "/images/tech/vercel.svg",
     "/images/tech/sql.png",
