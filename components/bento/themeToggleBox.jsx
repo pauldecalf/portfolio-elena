@@ -12,7 +12,6 @@ const getStoredValue = (key, defaultValue) => {
 export const ThemeToggleBox = () => {
   const [theme, setTheme] = useState("light");
   const [isLoaded, setIsLoaded] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     setTheme(getStoredValue("theme", "light"));
@@ -26,26 +25,7 @@ export const ThemeToggleBox = () => {
     }
   }, [theme, isLoaded]);
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    setDarkMode(!darkMode);
-  };
-
   return (
-    // <BentoBox onClick={toggleTheme} className="h-full flex items-center justify-center hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-    //   {darkMode ? (
-    //     <div className="flex items-center">
-    //       <SunIcon className="size-6 mr-2" />
-    //       <span>Light Mode</span>
-    //     </div>
-    //   ) : (
-    //     <div className="flex items-center">
-    //       <MoonIcon className="size-6 mr-2" />
-    //       <span>Dark Mode</span>
-    //     </div>
-    //   )}
-    // </BentoBox>
-
     <BentoBox className="h-full flex items-center justify-between p-1">
       <button
         onClick={() => setTheme("light")}
