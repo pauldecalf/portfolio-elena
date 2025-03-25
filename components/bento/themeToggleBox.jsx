@@ -1,5 +1,6 @@
 import BentoBox from "../bentoBox";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import MoonIcon from "../lottie/moonIcon";
+import SunIcon from "../lottie/sunIcon";
 import { useTheme } from "@/app/providers";
 
 export const ThemeToggleBox = () => {
@@ -13,7 +14,7 @@ export const ThemeToggleBox = () => {
           theme === "light" ? "bg-navbar shadow-md" : "bg-transparent"
         }`}
       >
-        <SunIcon className={`size-6 ${theme === "light" ? "text-black" : "text-gray-400"}`} />
+        <SunIcon />
       </button>
 
       <button
@@ -22,7 +23,7 @@ export const ThemeToggleBox = () => {
           theme === "dark" ? "bg-navbar shadow-md" : "bg-transparent"
         }`}
       >
-        <MoonIcon className={`size-6 ${theme === "dark" ? "text-white" : "text-gray-400"}`} />
+        <MoonIcon />
       </button>
     </BentoBox>
   );
