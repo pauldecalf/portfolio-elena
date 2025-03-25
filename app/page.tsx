@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col w-full justify-start items-center bg-gradient-to-br from-background-body-1 to-background-body-2 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col w-full justify-start items-center bg-gradient-to-br from-background-body-1 to-background-body-2 transition-colors duration-300 bg-grid">
       <NavBar />
 
       <main className="w-11/12 max-w-6xl py-6">
