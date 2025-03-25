@@ -5,7 +5,7 @@ import { useTheme } from "@/app/providers";
 import InboxDownAnimation from "./InboxDown.json";
 import InboxDownLightAnimation from "./InboxDownLight.json";
 
-const Download = () => {
+const DownloadIcon = () => {
   const { theme } = useTheme();
   const isLightMode = theme === "light";
   const downloadContainer = useRef<HTMLDivElement | null>(null);
@@ -62,4 +62,4 @@ const Download = () => {
   );
 };
 
-export default Download;
+export default DownloadIcon;

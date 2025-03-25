@@ -1,8 +1,9 @@
 import React from "react";
 import BentoBox from "../bentoBox";
 
-import { EyeIcon } from "@heroicons/react/24/outline";
-import Download from "../lottie/download";
+// import { EyeIcon } from "@heroicons/react/24/outline";
+import DownloadIcon from "../lottie/downloadIcon";
+import EyeIcon from "../lottie/eyeIcon";
 
 export const ResumeBox = () => {
   const cvUrl = "images/CV_Elena_FERREIRA.pdf";
@@ -15,10 +16,11 @@ export const ResumeBox = () => {
       </div>
 
       <div className="flex justify-center items-center gap-8">
-        <Download />
-        <a href={cvUrl} target="_blank">
+        <DownloadIcon />
+        <EyeIcon />
+        {/* <a href={cvUrl} target="_blank">
           <EyeIcon className="size-8 text-icon-color hover:text-icon-hover duration-400 transition-all" />
-        </a>
+        </a> */}
       </div>
     </BentoBox>
   );
