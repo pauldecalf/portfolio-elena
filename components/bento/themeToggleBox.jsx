@@ -1,6 +1,6 @@
 import BentoBox from "../bentoBox";
-import MoonIcon from "../lottie/moonIcon";
-import SunIcon from "../lottie/sunIcon";
+import MoonIcon from "../lottie-ui/moonIcon";
+import SunIcon from "../lottie-ui/sunIcon";
 import { useTheme } from "@/app/providers";
 
 export const ThemeToggleBox = () => {

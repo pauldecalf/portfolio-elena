@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "@/app/providers";
-import MoonAnimation from "./Moon.json";
-import MoonLightAnimation from "./MoonLight.json";
+import MoonAnimation from "../../public/lottie/moon/Moon.json";
+import MoonLightAnimation from "../../public/lottie/moon/MoonLight.json";
 
 const MoonIcon = () => {
   const { theme } = useTheme();

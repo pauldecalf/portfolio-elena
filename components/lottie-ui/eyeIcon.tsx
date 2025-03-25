@@ -2,25 +2,25 @@
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "@/app/providers";
-import InboxDownAnimation from "./InboxDown.json";
-import InboxDownLightAnimation from "./InboxDownLight.json";
+import EyeAnimation from "../../public/lottie/eye/Eye.json";
+import EyeLightAnimation from "../../public/lottie/eye/EyeLight.json";
 
-const DownloadIcon = () => {
+const EyeIcon = () => {
   const { theme } = useTheme();
   const isLightMode = theme === "light";
-  const downloadContainer = useRef<HTMLDivElement | null>(null);
+  const sendIconContainer = useRef<HTMLDivElement | null>(null);
 
   async function getLottie() {
     const lot = await import("lottie-web");
 
-    if (!downloadContainer.current) return;
+    if (!sendIconContainer.current) return;
     lot.default.loadAnimation({
-      name: "DownloadIcon",
+      name: "SendIcon",
       renderer: "svg",
       loop: false,
       autoplay: false,
-      animationData: isLightMode ? InboxDownAnimation : InboxDownLightAnimation,
-      container: downloadContainer.current,
+      animationData: isLightMode ? EyeLightAnimation : EyeAnimation,
+      container: sendIconContainer.current,
       rendererSettings: {
         preserveAspectRatio: "xMinYMin slice",
       },
@@ -29,7 +29,7 @@ const DownloadIcon = () => {
 
   async function destroyLottie() {
     const lot = await import("lottie-web");
-    lot.default.destroy("DownloadIcon");
+    lot.default.destroy("SendIcon");
   }
 
   useEffect(() => {
@@ -38,22 +38,22 @@ const DownloadIcon = () => {
     return () => {
       destroyLottie();
     };
-  }, [isLightMode]);
+  }, [isLightMode, theme]);
 
   const lottieHover = async () => {
     const lot = await import("lottie-web");
-    lot.default.play("DownloadIcon");
+    lot.default.play("SendIcon");
   };
 
   const lottieLeave = async () => {
     const lot = await import("lottie-web");
-    lot.default.stop("DownloadIcon");
+    lot.default.stop("SendIcon");
   };
 
   return (
-    <a href="images/CV_Elena_FERREIRA.pdf" download className="relative z-10">
+    <a href="images/CV_Elena_FERREIRA.pdf" target="_blank" className="relative z-10">
       <div
-        ref={downloadContainer}
+        ref={sendIconContainer}
         onMouseEnter={lottieHover}
         onMouseLeave={lottieLeave}
         className="size-10 opacity-50 hover:opacity-100 transition-opacity"
@@ -62,4 +62,4 @@ const DownloadIcon = () => {
   );
 };
 
-export default DownloadIcon;
+export default EyeIcon;

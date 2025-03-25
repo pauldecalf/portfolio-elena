@@ -1,7 +1,7 @@
 import React from "react";
 import BentoBox from "../bentoBox";
-import DownloadIcon from "../lottie/downloadIcon";
-import EyeIcon from "../lottie/eyeIcon";
+import DownloadIcon from "../lottie-ui/downloadIcon";
+import EyeIcon from "../lottie-ui/eyeIcon";
 
 export const ResumeBox = () => {
   return (
