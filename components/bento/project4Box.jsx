@@ -9,7 +9,7 @@ export const Project4Box = () => {
         <img src="/images/project4.png" alt="Project image" className="w-full h-auto mb-4 object-cover rounded-lg" />
 
         <div className="flex items-center mb-2">
-          <p className="text-sm text-subtitle">PROJET UNIVERSITAIRE</p>
+          <p className="text-sm text-subtitle uppercase">University Project</p>
         </div>
 
         <div className="flex items-center">

@@ -19,12 +19,12 @@ export const ProfileBox = () => {
 
         <div>
           <h2 className="text-3xl font-bold mb-1 text-title">Elena Ferreira</h2>
-          <p className="text-lg text-subtitle">Développeuse Front-End</p>
+          <p className="text-lg text-subtitle">Front-End Developer</p>
         </div>
       </div>
 
       <p className="text-base leading-relaxed">
-        Passionnée par le développement web et la création d'interfaces utilisateur modernes. Toujours à la recherche de nouveaux défis techniques.
+        Passionate about web development and creating modern user interfaces. Always seeking new technical challenges. Looking for an apprenticeship.{" "}
       </p>
     </BentoBox>
   );

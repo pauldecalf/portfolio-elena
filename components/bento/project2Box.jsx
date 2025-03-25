@@ -9,11 +9,11 @@ export const Project2Box = () => {
         <img src="/images/project2.png" alt="Project image" className="w-full h-auto mb-4 object-cover rounded-lg" />
 
         <div className="flex items-center mb-2">
-          <p className="text-sm text-subtitle">PROJET UNIVERSITAIRE</p>
+          <p className="text-sm text-subtitle uppercase">University Project</p>
         </div>
 
         <div className="flex items-center">
-          <h2 className="text-2xl font-bold mb-1 text-title">Site Web Projet Unity</h2>
+          <h2 className="text-2xl font-bold mb-1 text-title">Website for Unity Project</h2>
           <a href="https://unity.skyhosting.fr/" target="_blank" className="ml-2">
             <LinkIcon className="size-6 text-icon-color hover:text-icon-hover duration-400 transition-all" />
           </a>
