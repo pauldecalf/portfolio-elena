@@ -6,7 +6,7 @@ export default {
       "Passionnée par le développement web et la création d'interfaces utilisateur modernes. Toujours en quête de nouveaux défis techniques. Recherche une alternance.",
   },
   banner: {
-    portfolio_1: "PERSONNEL",
+    portfolio_1: "MON",
     portfolio_2: "PORTFOLIO",
     stack: "STACK UTILISÉE",
     tech: "TECH QUE J'❤️",
