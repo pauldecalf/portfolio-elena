@@ -7,19 +7,19 @@ export const metadata: Metadata = {
   description: "Elena Ferreira - Portfolio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: {
-    locale: string;
-  };
+  params: Promise<{ locale: string }>;
 }>) {
+  const resolvedParams = await params;
+
   return (
     <html lang="en-EN" dir="ltr">
       <body>
-        <Providers locale={params.locale}>{children}</Providers>
+        <Providers locale={resolvedParams.locale}>{children}</Providers>
       </body>
     </html>
   );
