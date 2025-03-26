@@ -9,7 +9,13 @@ export const Project4Box = () => {
   return (
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
       <div className="mb-4">
-        <img src="/images/project4.png" alt="Project image" className="w-full h-auto mb-4 object-cover rounded-lg" />
+        <a href="https://github.com/ElenaFerreira/WaveChatWebsite" target="_blank">
+          <img
+            src="/images/project4.png"
+            alt="Project image"
+            className="w-full h-auto mb-4 object-cover rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
+          />
+        </a>
 
         <div className="flex items-center mb-2">
           <p className="text-sm text-subtitle uppercase">{project_T("university_project")}</p>

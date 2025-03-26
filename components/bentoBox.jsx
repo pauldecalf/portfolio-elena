@@ -10,6 +10,7 @@ const BentoBox = ({ children, className = "", colSpan = 1, rowSpan = 1, onClick 
         border-2
         rounded-3xl shadow-md 
         transition-all duration-300 ease-in-out
+        z-10
         ${className}
         ${colSpan > 1 ? `md:col-span-${colSpan}` : ""}
         ${rowSpan > 1 ? `md:row-span-${rowSpan}` : ""}

@@ -11,7 +11,7 @@ export const LanguageSelect = () => {
   return (
     <button
       onClick={() => changelocale(nextLocale)}
-      className="text-lg p-2 rounded-lg transition hover:scale-110 cursor-pointer"
+      className="text-lg p-2 size-11 rounded-full bg-background transition-all hover:scale-110 cursor-pointer"
       aria-label={`Switch language to ${nextLocale}`}
     >
       {flag}

@@ -27,7 +27,7 @@ export const ExperienceBox = () => {
           { title: experience_T("exp4"), company: "University", years: "2019 - 2024" },
         ].map((job, index) => (
           <div key={index} className="flex flex-col md:flex-row md:justify-between md:items-center py-4 gap-1 md:gap-2">
-            <p className="text-3xl text-subtitle line-through font-bold">{job.title}</p>
+            <p className="text-3xl text-subtitle font-bold">{job.title}</p>
             <div className="text-left md:text-right w-full md:w-auto">
               <p className="font-bold text-sm text-subtitle">{job.company}</p>
               <p className="text-xs text-subtitle">{job.years}</p>
