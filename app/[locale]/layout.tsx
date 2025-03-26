@@ -18,6 +18,11 @@ export default async function RootLayout({
 
   return (
     <html lang="en-EN" dir="ltr">
+      <head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content="Solibad" />
+      </head>
+
       <body>
         <Providers locale={resolvedParams.locale}>{children}</Providers>
       </body>
