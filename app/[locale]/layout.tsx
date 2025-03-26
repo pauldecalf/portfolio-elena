@@ -8,14 +8,15 @@ export const metadata: Metadata = {
   description: "Elena Ferreira - Portfolio",
 };
 
-interface RootLayoutProps {
+type LayoutProps = {
   children: React.ReactNode;
   params: {
     locale: string;
   };
-}
+};
 
-export default function RootLayout({ children, params }: RootLayoutProps) {
+// Ensure that params is passed as an object, not a Promise
+export default function RootLayout({ children, params }: LayoutProps) {
   return (
     <html>
       <body>
