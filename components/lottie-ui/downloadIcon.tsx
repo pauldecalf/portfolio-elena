@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useTheme } from "@/app/[locale]/providers";
 import InboxDownAnimation from "../../public/lottie/inbox-down/InboxDown.json";
 import InboxDownLightAnimation from "../../public/lottie/inbox-down/InboxDownLight.json";
@@ -10,7 +8,7 @@ const DownloadIcon = () => {
   const isLightMode = theme === "light";
   const downloadContainer = useRef<HTMLDivElement | null>(null);
 
-  async function getLottie() {
+  const getLottie = useCallback(async () => {
     const lot = await import("lottie-web");
 
     if (!downloadContainer.current) return;
@@ -25,20 +23,19 @@ const DownloadIcon = () => {
         preserveAspectRatio: "xMinYMin slice",
       },
     });
-  }
+  }, [isLightMode]);
 
-  async function destroyLottie() {
+  const destroyLottie = useCallback(async () => {
     const lot = await import("lottie-web");
     lot.default.destroy("DownloadIcon");
-  }
+  }, []);
 
   useEffect(() => {
     getLottie();
-
     return () => {
       destroyLottie();
     };
-  }, [isLightMode]);
+  }, [getLottie, destroyLottie]);
 
   const lottieHover = async () => {
     const lot = await import("lottie-web");
