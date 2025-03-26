@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "./providers";
-import { Providers } from "./providers";
+import type { Metadata } from "next";
+import { Providers } from "./providers/providers";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
@@ -18,11 +17,9 @@ export default function RootLayout({
   };
 }>) {
   return (
-    <html>
+    <html lang="en-EN" dir="ltr">
       <body>
-        <Providers locale={params.locale}>
-          <ThemeProvider>{children}</ThemeProvider>
-        </Providers>
+        <Providers locale={params.locale}>{children}</Providers>
       </body>
     </html>
   );

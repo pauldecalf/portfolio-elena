@@ -20,7 +20,7 @@
 //   );
 // };
 
-import { useTheme } from "@/app/[locale]/providers";
+import { useTheme } from "@/app/[locale]/providers/theme-provider";
 import BentoBox from "../bentoBox";
 
 export const MapBox = () => {
