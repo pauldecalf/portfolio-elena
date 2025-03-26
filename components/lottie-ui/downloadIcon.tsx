@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from "react";
-import { useTheme } from "@/app/[locale]/providers/theme-provider";
+import { useTheme } from "@/providers/theme-provider";
 import InboxDownAnimation from "../../public/lottie/inbox-down/InboxDown.json";
 import InboxDownLightAnimation from "../../public/lottie/inbox-down/InboxDownLight.json";
 

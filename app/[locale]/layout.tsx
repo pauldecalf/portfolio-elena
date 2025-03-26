@@ -1,6 +1,6 @@
+import { Providers } from "@/providers/providers";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Providers } from "./providers/providers";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { useTheme } from "@/app/[locale]/providers/theme-provider";
+import { useTheme } from "@/providers/theme-provider";
 import SunAnimation from "../../public/lottie/sun/Sun.json";
 import SunLightAnimation from "../../public/lottie/sun/SunLight.json";
 

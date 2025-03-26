@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { useTheme } from "@/app/[locale]/providers/theme-provider";
+import { useTheme } from "@/providers/theme-provider";
 import EyeAnimation from "../../public/lottie/eye/Eye.json";
 import EyeLightAnimation from "../../public/lottie/eye/EyeLight.json";
 

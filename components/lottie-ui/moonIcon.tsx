@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { useTheme } from "@/app/[locale]/providers/theme-provider";
+import { useTheme } from "@/providers/theme-provider";
 import MoonAnimation from "../../public/lottie/moon/Moon.json";
 import MoonLightAnimation from "../../public/lottie/moon/MoonLight.json";
 
