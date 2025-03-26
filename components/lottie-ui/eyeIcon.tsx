@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useTheme } from "@/app/[locale]/providers";
 import EyeAnimation from "../../public/lottie/eye/Eye.json";
 import EyeLightAnimation from "../../public/lottie/eye/EyeLight.json";
@@ -10,7 +10,7 @@ const EyeIcon = () => {
   const isLightMode = theme === "light";
   const sendIconContainer = useRef<HTMLDivElement | null>(null);
 
-  async function getLottie() {
+  const getLottie = useCallback(async () => {
     const lot = await import("lottie-web");
 
     if (!sendIconContainer.current) return;
@@ -25,20 +25,19 @@ const EyeIcon = () => {
         preserveAspectRatio: "xMinYMin slice",
       },
     });
-  }
+  }, [isLightMode]);
 
-  async function destroyLottie() {
+  const destroyLottie = useCallback(async () => {
     const lot = await import("lottie-web");
     lot.default.destroy("SendIcon");
-  }
+  }, []);
 
   useEffect(() => {
     getLottie();
-
     return () => {
       destroyLottie();
     };
-  }, [isLightMode, theme]);
+  }, [getLottie, destroyLottie]);
 
   const lottieHover = async () => {
     const lot = await import("lottie-web");

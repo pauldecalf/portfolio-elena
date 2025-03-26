@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useTheme } from "@/app/[locale]/providers";
 import SunAnimation from "../../public/lottie/sun/Sun.json";
 import SunLightAnimation from "../../public/lottie/sun/SunLight.json";
@@ -10,7 +10,7 @@ const SunIcon = () => {
   const isLightMode = theme === "light";
   const sunIconContainer = useRef<HTMLDivElement | null>(null);
 
-  async function getLottie() {
+  const getLottie = useCallback(async () => {
     const lot = await import("lottie-web");
 
     if (!sunIconContainer.current) return;
@@ -25,20 +25,19 @@ const SunIcon = () => {
         preserveAspectRatio: "xMinYMin slice",
       },
     });
-  }
+  }, [isLightMode]);
 
-  async function destroyLottie() {
+  const destroyLottie = useCallback(async () => {
     const lot = await import("lottie-web");
     lot.default.destroy("SunIcon");
-  }
+  }, []);
 
   useEffect(() => {
     getLottie();
-
     return () => {
       destroyLottie();
     };
-  }, [isLightMode, theme]);
+  }, [getLottie, destroyLottie]);
 
   const lottieHover = async () => {
     const lot = await import("lottie-web");
@@ -51,7 +50,7 @@ const SunIcon = () => {
   };
 
   return (
-    <div onMouseEnter={lottieHover} onMouseLeave={lottieLeave} className={`group/sun h-full w-full flex items-center justify-center`}>
+    <div onMouseEnter={lottieHover} onMouseLeave={lottieLeave} className="group/sun h-full w-full flex items-center justify-center">
       <div ref={sunIconContainer} className={`size-8 ${isLightMode ? "" : "opacity-50"} group-hover/sun:opacity-100 transition-opacity`} />
     </div>
   );
