@@ -18,9 +18,9 @@ export default function RootLayout({
   };
 }>) {
   return (
-    <html lang={params.locale || "en"}>
+    <html>
       <body>
-        <Providers locale={params.locale || "en"}>
+        <Providers locale={params.locale}>
           <ThemeProvider>{children}</ThemeProvider>
         </Providers>
       </body>
