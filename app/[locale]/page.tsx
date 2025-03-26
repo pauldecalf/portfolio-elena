@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import NavBar from "../components/navBar";
+import NavBar from "@/components/navBar";
 import {
   ProfileBox,
   MapBox,
@@ -18,7 +18,7 @@ import {
   Project2Box,
   Project3Box,
   Project4Box,
-} from "../components/bento";
+} from "@/components/bento";
 
 export default function Home() {
   useEffect(() => {

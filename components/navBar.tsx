@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { LanguageSelect } from "./languageSelect";
 
 export default function NavBar() {
   const [activeTab, setActiveTab] = useState("All");
@@ -21,6 +22,7 @@ export default function NavBar() {
           {item}
         </div>
       ))}
+      <LanguageSelect />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useTheme } from "@/app/providers";
+import { useTheme } from "@/app/[locale]/providers";
 import InboxDownAnimation from "../../public/lottie/inbox-down/InboxDown.json";
 import InboxDownLightAnimation from "../../public/lottie/inbox-down/InboxDownLight.json";
 

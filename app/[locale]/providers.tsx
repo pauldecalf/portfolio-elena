@@ -1,5 +1,7 @@
 "use client";
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { I18nProviderClient } from "@/locales/client";
+import { PropsWithChildren } from "react";
 
 interface ThemeContextType {
   theme: string;
@@ -37,4 +39,8 @@ export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) throw new Error("useTheme must be used within a ThemeProvider");
   return context;
+};
+
+export const Providers = (props: PropsWithChildren<{ locale: string }>) => {
+  return <I18nProviderClient locale={props.locale}>{props.children}</I18nProviderClient>;
 };

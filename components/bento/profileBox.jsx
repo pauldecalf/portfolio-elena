@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import BentoBox from "../bentoBox";
+import { useScopedI18n } from "@/locales/client";
 
 export const ProfileBox = () => {
+  const profile_T = useScopedI18n("profile");
   return (
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
       <div className="flex items-center mb-4">
@@ -19,13 +21,11 @@ export const ProfileBox = () => {
 
         <div>
           <h2 className="text-3xl font-bold mb-1 text-title">Elena Ferreira</h2>
-          <p className="text-lg text-subtitle">Front-End Developer</p>
+          <p className="text-lg text-subtitle">{profile_T("job")}</p>
         </div>
       </div>
 
-      <p className="text-base leading-relaxed">
-        Passionate about web development and creating modern user interfaces. Always seeking new technical challenges. Looking for an apprenticeship.{" "}
-      </p>
+      <p className="text-base leading-relaxed">{profile_T("about")} </p>
     </BentoBox>
   );
 };

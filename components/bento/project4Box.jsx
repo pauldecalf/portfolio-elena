@@ -1,15 +1,18 @@
 import React from "react";
 import BentoBox from "../bentoBox";
 import { FolderIcon } from "@heroicons/react/24/outline";
+import { useScopedI18n } from "@/locales/client";
 
 export const Project4Box = () => {
+  const project_T = useScopedI18n("project");
+
   return (
     <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
       <div className="mb-4">
         <img src="/images/project4.png" alt="Project image" className="w-full h-auto mb-4 object-cover rounded-lg" />
 
         <div className="flex items-center mb-2">
-          <p className="text-sm text-subtitle uppercase">University Project</p>
+          <p className="text-sm text-subtitle uppercase">{project_T("university_project")}</p>
         </div>
 
         <div className="flex items-center">
