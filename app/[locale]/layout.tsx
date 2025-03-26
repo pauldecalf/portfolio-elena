@@ -8,15 +8,14 @@ export const metadata: Metadata = {
   description: "Elena Ferreira - Portfolio",
 };
 
-export default function RootLayout({
-  children,
-  params,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
   params: {
     locale: string;
   };
-}>) {
+}
+
+export default function RootLayout({ children, params }: RootLayoutProps) {
   return (
     <html>
       <body>
