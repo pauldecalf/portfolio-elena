@@ -8,6 +8,7 @@
   --color-background-body-2: var(--background-body2);
   --color-background-hover: var(--background-hover);
 
+  --color-navbar-background: var(--navbar-background);
   --color-navbar: var(--navbar);
   --color-navbar-text: var(--navbar-text);
 
@@ -25,34 +26,32 @@
 
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 @layer utilities {
   :root {
-    --background-body1: #f6f4f1;
-    --background-body2: #ffcaa7;
+    --background-body1: #e6eff7;
+    --background-body2: #beaedb;
 
     --background: #f7f7f7;
-    --foreground: #171717;
-    --background-hover: #f5f1ec;
+    --foreground: #3a2d34;
+    --background-hover: #f2f0f7;
 
+    --navbar-background: rgba(208, 196, 230, 0.6);
     --navbar: #f7f7f7;
-    --navbar-text: #171717;
+    --navbar-text: #3a2d34;
 
     --bento-border: rgba(0, 0, 0, 0);
 
-    --title: #171717;
+    --title: #3a2d34;
     --subtitle: #7f7f7f;
 
     --icon-color: #7f7f7f;
-    --icon-hover: #171717;
+    --icon-hover: #3a2d34;
 
     --skills: #e5e5e5;
-    --label: #315a72;
+    --label: #9eb5a3;
 
-    --primary: #87c5ea;
+    --primary: #9eb5a3;
     --secondary: #ffcaa7;
   }
 
@@ -64,6 +63,7 @@
     --foreground: #ededed;
     --background-hover: #0e0f11;
 
+    --navbar-background: rgba(24, 25, 30, 0.6);
     --navbar: #323337;
     --navbar-text: #ededed;
 
@@ -141,7 +141,7 @@ body {
 .bg-grid {
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(to bottom right, var(--background-body1) 0%, var(--background-body2) 100%);
+  background-image: linear-gradient(to bottom right, var(--background-body1) 30%, var(--background-body2) 100%);
 }
 
 .bg-grid::before {
@@ -153,8 +153,8 @@ body {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, rgba(190, 190, 190, 0.2) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(190, 190, 190, 0.2) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(190, 190, 190, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(190, 190, 190, 0.1) 1px, transparent 1px);
   background-size: 70px 70px;
   pointer-events: none;
   z-index: 2;

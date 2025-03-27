@@ -10,12 +10,12 @@ export default function NavBar() {
   //
 
   return (
-    <div className="w-fit bg-background/50 rounded-full p-2 my-6 flex space-x-4">
+    <div className="w-fit bg-navbar-background rounded-full p-2 my-6 flex space-x-4 z-20">
       {["All", "About", "Work"].map((item) => (
         <div
           key={item}
           className={`w-24 sm:w-32 cursor-pointer text-center border-2 border-transparent rounded-full px-4 py-2 ${
-            activeTab === item ? "bg-navbar" : "text-gray-400"
+            activeTab === item ? "bg-navbar" : "text-subtitle"
           }`}
           onClick={() => setActiveTab(item)}
         >
