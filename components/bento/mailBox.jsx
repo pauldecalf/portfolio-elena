@@ -3,7 +3,7 @@ import BentoBox from "../bentoBox";
 
 export const MailBox = () => {
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.01] cursor-pointer">
+    <BentoBox className="flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out">
       <div className="flex justify-center items-center">
         <a href="mailto:elena.lacroixferreira@gmail.com">
           <svg viewBox="0 0 25 24" fill="none" className="size-20 fill-icon-color hover:fill-icon-hover cursor-pointer duration-400 transition-all">

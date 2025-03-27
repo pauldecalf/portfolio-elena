@@ -16,7 +16,7 @@ export default function NavBar() {
           key={item}
           className={`w-24 sm:w-32 cursor-pointer text-center border-2 border-transparent rounded-full px-4 py-2 ${
             activeTab === item ? "bg-navbar" : "text-gray-400"
-          } transition-all duration-300`}
+          }`}
           onClick={() => setActiveTab(item)}
         >
           {item}

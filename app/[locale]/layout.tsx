@@ -27,7 +27,7 @@ export default async function RootLayout({
         <link rel="manifest" href="/images/favicon/site.webmanifest" />
       </head>
 
-      <body className="relative w-full h-full min-h-screen transition-colors duration-300 bg-grid">
+      <body className="relative w-full h-full min-h-screen bg-grid">
         <Providers locale={resolvedParams.locale}>{children}</Providers>
       </body>
     </html>
