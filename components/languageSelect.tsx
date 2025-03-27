@@ -6,7 +6,7 @@ export const LanguageSelect = () => {
   const changelocale = useChangeLocale();
 
   const nextLocale = locale === "en" ? "fr" : "en";
-  const flag = locale === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "	\ud83c\uddeb\ud83c\uddf7"; // Drapeaux en 🇬🇧 et 🇫🇷
+  const flag = locale === "en" ? "/../../images/UK.svg" : "/../../images/FR.svg";
 
   return (
     <button
@@ -14,7 +14,7 @@ export const LanguageSelect = () => {
       className="text-lg p-2 size-11 rounded-full bg-background hover:scale-110 cursor-pointer"
       aria-label={`Switch language to ${nextLocale}`}
     >
-      {flag}
+      <img src={flag} alt={`Switch language to ${nextLocale}`} className="size-5" />
     </button>
   );
 };
