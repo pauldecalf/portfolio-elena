@@ -6,7 +6,7 @@ export const LanguageSelect = () => {
   const changelocale = useChangeLocale();
 
   const nextLocale = locale === "en" ? "fr" : "en";
-  const flag = locale === "en" ? "🇬🇧" : "🇫🇷";
+  const flag = locale === "en" ? "\uD83C\uDDEC\uD83C\uDDE7" : "	\ud83c\uddeb\ud83c\uddf7"; // Drapeaux en 🇬🇧 et 🇫🇷
 
   return (
     <button
