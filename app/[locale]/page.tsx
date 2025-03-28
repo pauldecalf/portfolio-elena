@@ -18,6 +18,7 @@ import {
   Project2Box,
   Project3Box,
   Project4Box,
+  Project5Box,
 } from "@/components/bento";
 
 export default function Home() {
@@ -78,6 +79,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6-4">
           <Project1Box />
           <Project2Box />
+          <Project5Box />
           <Project3Box />
           <Project4Box />
         </div>

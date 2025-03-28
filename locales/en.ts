@@ -34,6 +34,7 @@ export default {
     university_project: "University Project",
     project1: "Website for Boulangers du Grand Paris",
     project2: "Website for Unity Project",
+    project5: "SaaS Platform Peppersoft",
   },
 
   menu: {
