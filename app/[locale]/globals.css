@@ -25,7 +25,9 @@
   --color-subtitle: var(--subtitle);
 
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+  --color-grid: var(--grid);
+
+  --screen-xs: "384px";
 }
 @layer utilities {
   :root {
@@ -36,7 +38,7 @@
     --foreground: #3a2d34;
     --background-hover: #f2f0f7;
 
-    --navbar-background: rgba(208, 196, 230, 0.6);
+    --navbar-background: rgba(208, 196, 230, 0.4);
     --navbar: #f7f7f7;
     --navbar-text: #3a2d34;
 
@@ -52,7 +54,10 @@
     --label: #9eb5a3;
 
     --primary: #9eb5a3;
-    --secondary: #ffcaa7;
+
+    --grid: rgba(170, 170, 170, 0.2);
+
+    --timeline: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgb(158, 181, 163) 20%, rgb(158, 181, 163) 80%, rgba(255, 0, 0, 0) 100%);
   }
 
   [data-theme="dark"] {
@@ -79,7 +84,10 @@
     --label: #4a3678;
 
     --primary: #4a3678;
-    --secondary: #161c29;
+
+    --grid: rgba(190, 190, 190, 0.1);
+
+    --timeline: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, rgb(74, 54, 120) 20%, rgb(74, 54, 120) 80%, rgba(255, 0, 0, 0) 100%);
   }
 }
 
@@ -153,10 +161,14 @@ body {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, rgba(190, 190, 190, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(190, 190, 190, 0.1) 1px, transparent 1px);
+  background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
   background-size: 70px 70px;
   pointer-events: none;
   z-index: 2;
   opacity: 0.8;
+}
+
+.timeline {
+  background: rgb(red, green, blue);
+  background-image: var(--timeline);
 }
