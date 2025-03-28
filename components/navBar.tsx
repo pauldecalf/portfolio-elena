@@ -12,7 +12,7 @@ export default function NavBar() {
   //
 
   return (
-    <div className="w-fit bg-navbar-background rounded-full p-2 my-6 flex space-x-4 z-20">
+    <div className="w-fit bg-navbar-background rounded-full p-2 my-6 flex space-x-1 md:space-x-4 z-20">
       {[menu_T("all"), menu_T("about"), menu_T("work")].map((item) => (
         <div
           key={item}
