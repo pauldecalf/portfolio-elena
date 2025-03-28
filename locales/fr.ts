@@ -40,8 +40,8 @@ export default {
 
   menu: {
     all: "Tout",
-    about: "À propos",
-    work: "Travaux",
+    about: "Infos",
+    work: "Projets",
   },
 
   languages: {
