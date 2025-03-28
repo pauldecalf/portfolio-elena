@@ -4,33 +4,43 @@ import { createContext, useContext, useEffect, useState, ReactNode } from "react
 interface ThemeContextType {
   theme: string;
   toggleTheme: () => void;
-  isMounted: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+const getInitialTheme = (): string => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("theme") || "dark";
+  }
+  return "dark";
+};
+
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<string>("dark");
-  const [isMounted, setIsMounted] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>(getInitialTheme);
+  const [hydrated, setHydrated] = useState<boolean>(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(storedTheme);
-    setIsMounted(true);
+    setHydrated(true);
   }, []);
 
   useEffect(() => {
-    if (isMounted) {
+    if (hydrated) {
       document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
     }
-  }, [theme, isMounted]);
+  }, [theme, hydrated]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+      return newTheme;
+    });
   };
 
-  return <ThemeContext.Provider value={{ theme, toggleTheme, isMounted }}>{children}</ThemeContext.Provider>;
+  if (!hydrated) return null;
+
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => {

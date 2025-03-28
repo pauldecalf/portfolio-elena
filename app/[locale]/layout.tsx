@@ -1,6 +1,7 @@
 import { Providers } from "@/providers/providers";
 import "./globals.css";
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
@@ -17,7 +18,7 @@ export default async function RootLayout({
   const resolvedParams = await params;
 
   return (
-    <html lang="en-EN" dir="ltr">
+    <html lang={resolvedParams.locale} dir="ltr">
       <head>
         <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
@@ -28,7 +29,10 @@ export default async function RootLayout({
       </head>
 
       <body className="relative w-full h-full min-h-screen bg-grid">
-        <Providers locale={resolvedParams.locale}>{children}</Providers>
+        {/* Place ThemeProvider ici pour qu'il ne soit pas rechargé avec Providers */}
+        <ThemeProvider>
+          <Providers locale={resolvedParams.locale}>{children}</Providers>
+        </ThemeProvider>
       </body>
     </html>
   );
