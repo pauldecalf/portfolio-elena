@@ -37,6 +37,12 @@ export default {
     project2: "Site web projet Unity",
   },
 
+  menu: {
+    all: "Tout",
+    about: "À propos",
+    work: "Travaux",
+  },
+
   languages: {
     fr: "Français",
     en: "Anglais",
