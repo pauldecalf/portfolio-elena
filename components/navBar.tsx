@@ -1,25 +1,50 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { LanguageSelect } from "./languageSelect";
 import { useScopedI18n } from "@/locales/client";
 
 export default function NavBar() {
-  const menu_T = useScopedI18n("menu");
-  const [activeTab, setActiveTab] = useState(menu_T("all"));
-
   // Espace commentaire pour Loris esclave qui m'aide
-  //
+
+  const menu_T = useScopedI18n("menu");
+  const menuItems = [menu_T("all"), menu_T("about"), menu_T("work")];
+
+  const savedTab = localStorage.getItem("activeTabIndex");
+  const initialTabIndex = savedTab ? parseInt(savedTab, 10) : 0;
+
+  const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
+  const [highlightStyle, setHighlightStyle] = useState({});
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (menuRef.current) {
+      const activeElement = menuRef.current.querySelector(".active-tab");
+      if (activeElement) {
+        const { offsetLeft, offsetWidth } = activeElement as HTMLElement;
+        setHighlightStyle({
+          transform: `translateX(${offsetLeft - 8}px)`,
+          width: `${offsetWidth}px`,
+        });
+      }
+    }
+  }, [activeTabIndex]);
+
+  useEffect(() => {
+    localStorage.setItem("activeTabIndex", activeTabIndex.toString());
+  }, [activeTabIndex]);
 
   return (
-    <div className="w-fit bg-navbar-background rounded-full p-2 my-6 flex space-x-1 md:space-x-4 z-20">
-      {[menu_T("all"), menu_T("about"), menu_T("work")].map((item) => (
+    <div className="relative w-fit bg-navbar-background rounded-full p-2 my-6 flex gap-2 z-20" ref={menuRef}>
+      <div className="absolute h-11 bg-navbar rounded-full transition-all duration-300 ease-in-out" style={highlightStyle} />
+
+      {menuItems.map((item, index) => (
         <div
           key={item}
-          className={`w-24 sm:w-32 cursor-pointer text-center border-2 border-transparent rounded-full px-4 py-2 ${
-            activeTab === item ? "bg-navbar" : "text-subtitle"
+          className={`relative w-24 sm:w-32 cursor-pointer text-center border-2 border-transparent rounded-full px-4 py-2 z-10 ${
+            activeTabIndex === index ? "active-tab" : "text-subtitle"
           }`}
-          onClick={() => setActiveTab(item)}
+          onClick={() => setActiveTabIndex(index)}
         >
           {item}
         </div>
