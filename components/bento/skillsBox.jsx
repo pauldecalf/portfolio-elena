@@ -2,26 +2,51 @@ import React from "react";
 import BentoBox from "../bentoBox";
 import { useScopedI18n } from "@/locales/client";
 import Marquee from "react-fast-marquee";
+import { useTheme } from "@/providers/theme-provider";
 
 export const SkillsBox = () => {
-  const techLogos = [
+  const { theme } = useTheme();
+  const isLightMode = theme === "light";
+
+  const techLogosLight = [
+    "/images/tech/html.png",
     "/images/tech/nextjs.svg",
     "/images/tech/react.svg",
     "/images/tech/typescript.png",
+    "/images/tech/php.png",
+    "/images/tech/python.png",
+    "/images/tech/css.png",
+    "/images/tech/django.svg",
+    "/images/tech/github.svg",
+    "/images/tech/gitlab.png",
+    "/images/tech/vercel.svg",
+    "/images/tech/symfony.svg",
+    "/images/tech/Tailwind.png",
+    "/images/tech/sql.svg",
+    "/images/tech/wordpress.png",
+    "/images/tech/Bootstrap.svg",
+  ];
+
+  const techLogosDark = [
     "/images/tech/html.png",
+    "/images/tech/nextjs-light.svg",
+    "/images/tech/react.svg",
+    "/images/tech/typescript.png",
     "/images/tech/php.png",
     "/images/tech/python.png",
     "/images/tech/css.png",
     "/images/tech/django.svg",
     "/images/tech/github-white.svg",
     "/images/tech/gitlab.png",
-    "/images/tech/vercel.svg",
-    "/images/tech/sql.png",
+    "/images/tech/vercel-light.svg",
     "/images/tech/symfony.svg",
     "/images/tech/Tailwind.png",
+    "/images/tech/sql-light.svg",
     "/images/tech/wordpress.png",
     "/images/tech/Bootstrap.svg",
   ];
+
+  const techLogos = isLightMode ? techLogosLight : techLogosDark;
   const banner_T = useScopedI18n("banner");
 
   return (
