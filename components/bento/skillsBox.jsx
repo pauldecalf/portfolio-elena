@@ -1,6 +1,7 @@
 import React from "react";
 import BentoBox from "../bentoBox";
 import { useScopedI18n } from "@/locales/client";
+import Marquee from "react-fast-marquee";
 
 export const SkillsBox = () => {
   const techLogos = [
@@ -26,13 +27,20 @@ export const SkillsBox = () => {
   return (
     <BentoBox className="relative overflow-hidden p-5 md:col-span-2 h-full flex flex-col justify-between">
       <div className="relative my-10 after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
-        <div className="animate-marquee flex whitespace-nowrap">
-          {techLogos.concat(techLogos).map((logo, i) => (
-            <div key={i} className="flex items-center mx-2 bg-skills p-4 rounded-xl">
-              <img src={logo} alt="Tech logo" className="size-10 object-contain" />
-            </div>
-          ))}
-        </div>
+        <Marquee
+          speed={30}
+          style={{
+            maskImage: "linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)",
+          }}
+        >
+          <div className="flex whitespace-nowrap">
+            {techLogos.concat(techLogos).map((logo, i) => (
+              <div key={i} className="flex items-center mx-2 bg-skills p-4 rounded-xl">
+                <img src={logo} alt="Tech logo" className="size-10 object-contain" />
+              </div>
+            ))}
+          </div>
+        </Marquee>
       </div>
       <div className="mb-4">
         <p className="text-sm text-subtitle">{banner_T("stack")}</p>
