@@ -3,14 +3,14 @@ import BentoBox from "../bentoBox";
 
 export const LinkedinBox = () => {
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out">
-      <div className="flex justify-center items-center">
-        <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank">
+    <BentoBox className="group flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out">
+      <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank">
+        <div className="flex justify-center items-center">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="size-20 fill-icon-color hover:fill-icon-hover cursor-pointer duration-400 transition-all"
+            className="size-20 fill-icon-color group-hover:fill-icon-hover cursor-pointer duration-400 transition-all"
           >
             <path
               fillRule="evenodd"
@@ -33,8 +33,8 @@ export const LinkedinBox = () => {
               d="M7.02441 8.30807C7.02441 7.83398 7.40868 7.44922 7.88324 7.44922C8.35721 7.44922 8.74214 7.83338 8.74214 8.30807C8.74214 8.78276 8.35722 9.16693 7.88324 9.16693C7.40866 9.16693 7.02441 8.78216 7.02441 8.30807Z"
             ></path>
           </svg>
-        </a>
-      </div>
+        </div>
+      </a>
     </BentoBox>
   );
 };
