@@ -6,18 +6,17 @@ import ParticlesBackground from "@/components/particlesBackground";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
-  description: "A portfolio of Elena Ferreira, a Front-end Developer based in Paris, France.",
+  description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
   authors: [{ name: "Elena Ferreira", url: "https://elena-ferreira.vercel.app" }],
-  keywords: "développeuse web, front-end, portfolio",
+  keywords: "développeuse web, développement web, front-end, portfolio",
   openGraph: {
     title: "Elena Ferreira - Portfolio",
-    description: "A portfolio of Elena Ferreira, a Front-end Developer based in Paris, France.",
+    description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
     url: "https://elena-ferreira.vercel.app",
-    siteName: "Elena Ferreira - Portfolio",
     type: "website",
     images: [
       {
-        url: "https://elena-ferreira.vercel.app/website.png",
+        url: "https://elena-ferreira.vercel.app/images/website.png",
         width: 3024,
         height: 1492,
         alt: "Elena Ferreira - Portfolio",
