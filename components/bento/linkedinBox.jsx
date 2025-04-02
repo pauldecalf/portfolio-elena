@@ -6,7 +6,7 @@ export const LinkedinBox = () => {
   const { activeTabIndex } = useTab();
   return (
     <BentoBox
-      className={`group flex flex-col justify-center p-5 md:col-span-2 row-span-2 row-start-10 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out 
+      className={`md:col-span-2 row-span-2 row-start-10 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out 
     ${
       activeTabIndex === 1
         ? "md:col-start-1 md:row-start-4"
@@ -16,7 +16,7 @@ export const LinkedinBox = () => {
     }
     `}
     >
-      <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank">
+      <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank" className="group flex flex-col justify-center p-5 h-full w-full">
         <div className="flex justify-center items-center">
           <svg
             viewBox="0 0 24 24"

@@ -7,10 +7,10 @@ export const MailBox = () => {
 
   return (
     <BentoBox
-      className={`group flex flex-col justify-center p-5 md:col-span-4 row-span-2 md:col-start-3 row-start-16 md:row-start-8 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out  
+      className={`md:col-span-4 row-span-2 md:col-start-3 row-start-16 md:row-start-8 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out  
         ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-40 pointer-events-none" : ""}`}
     >
-      <a href="mailto:elena.lacroixferreira@gmail.com">
+      <a href="mailto:elena.lacroixferreira@gmail.com" className="group flex flex-col justify-center p-5 h-full w-full">
         <div className="flex justify-center items-center">
           <svg
             viewBox="0 0 25 24"
