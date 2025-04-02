@@ -11,7 +11,7 @@ export const LinkedinBox = () => {
       activeTabIndex === 1
         ? "md:col-start-1 md:row-start-4"
         : activeTabIndex === 2
-        ? "opacity-50 pointer-events-none md:col-start-1 md:row-start-4"
+        ? "opacity-40 pointer-events-none md:col-start-1 md:row-start-4"
         : "md:col-start-1 md:row-start-4"
     }
     `}

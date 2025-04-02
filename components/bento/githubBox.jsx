@@ -7,7 +7,7 @@ export const GithubBox = () => {
   return (
     <BentoBox
       className={`group flex flex-col justify-center p-5 md:col-span-2 row-span-2 md:col-start-1 row-start-12 md:row-start-6 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out
-      ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-50 pointer-events-none" : ""}
+      ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-40 pointer-events-none" : ""}
     `}
     >
       <a href="https://github.com/ElenaFerreira" target="_blank">

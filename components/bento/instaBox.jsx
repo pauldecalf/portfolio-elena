@@ -8,7 +8,7 @@ export const InstaBox = () => {
   return (
     <BentoBox
       className={`group flex flex-col justify-center p-5 md:col-span-2 row-span-2 md:col-start-1 row-start-14 md:row-start-8 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out
-         ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-50 pointer-events-none" : ""}
+         ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-40 pointer-events-none" : ""}
         `}
     >
       <a href="https://www.instagram.com/elena_pics_/" target="_blank">

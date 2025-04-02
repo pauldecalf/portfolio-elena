@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
   description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
   authors: [{ name: "Elena Ferreira", url: "https://elena-ferreira.vercel.app" }],
-  keywords: "développeuse web, développement web, front-end, portfolio",
   openGraph: {
     title: "Elena Ferreira - Portfolio",
     description: "Elena's portfolio, a Front-end Developer based in Paris, France.",

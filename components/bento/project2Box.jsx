@@ -11,7 +11,7 @@ export const Project2Box = () => {
   return (
     <BentoBox
       className={`flex flex-col justify-center p-5 md:col-span-6 row-span-6 md:col-start-7 row-start-34 md:row-start-10 h-full
-        ${activeTabIndex === 1 ? "opacity-50 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
+        ${activeTabIndex === 1 ? "opacity-40 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
       `}
     >
       <div className="mb-4">

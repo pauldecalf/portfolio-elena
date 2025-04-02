@@ -11,7 +11,7 @@ export const ThemeToggleBox = () => {
   return (
     <BentoBox
       className={`h-full flex items-center justify-between p-1 md:col-span-3 row-span-1 md:col-start-10 row-start-8 md:row-start-3
-      ${activeTabIndex === 1 ? "opacity-50" : activeTabIndex === 2 ? "opacity-50" : ""}
+      ${activeTabIndex === 1 ? "opacity-40" : activeTabIndex === 2 ? "opacity-40" : ""}
     `}
     >
       <button

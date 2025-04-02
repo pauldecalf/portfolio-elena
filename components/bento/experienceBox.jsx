@@ -10,7 +10,7 @@ export const ExperienceBox = () => {
   return (
     <BentoBox
       className={`flex flex-col justify-center p-6 md:col-span-6 row-span-6 md:col-start-7 row-start-22 md:row-start-4 h-full
-        ${activeTabIndex === 1 ? "opacity-50 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
+        ${activeTabIndex === 1 ? "opacity-40 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
       `}
     >
       <div className="mb-4">

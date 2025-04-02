@@ -11,7 +11,7 @@ export const ProfileBox = () => {
   return (
     <BentoBox
       className={`flex flex-col justify-center p-5 md:col-span-6 row-span-3 md:col-start-1 row-start-1 h-full 
-        ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-50 pointer-events-none" : ""}`}
+        ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-40 pointer-events-none" : ""}`}
     >
       <div className="flex items-center mb-4">
         <div className="relative size-24 flex items-center justify-center mr-6">
