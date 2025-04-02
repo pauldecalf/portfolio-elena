@@ -3,8 +3,10 @@ import BentoBox from "../bentoBox";
 import { useScopedI18n } from "@/locales/client";
 import Marquee from "react-fast-marquee";
 import { useTheme } from "@/providers/theme-provider";
+import { useTab } from "@/providers/tabContext";
 
 export const SkillsBox = () => {
+  const { activeTabIndex } = useTab();
   const { theme } = useTheme();
   const isLightMode = theme === "light";
 
@@ -50,7 +52,11 @@ export const SkillsBox = () => {
   const banner_T = useScopedI18n("banner");
 
   return (
-    <BentoBox className="relative overflow-hidden p-5 md:col-span-2 h-full flex flex-col justify-between">
+    <BentoBox
+      className={`relative overflow-hidden p-5 md:col-span-4 row-span-4 md:col-start-3 row-start-18 md:row-start-4 h-full flex flex-col justify-between import { useTab } from "@/providers/tabContext"
+        ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-50 pointer-events-none" : ""}
+      `}
+    >
       <div className="relative my-10 after:w-[calc(100%+32px)] after:h-full after:absolute after:top-0 after:-left-4">
         <Marquee
           speed={30}

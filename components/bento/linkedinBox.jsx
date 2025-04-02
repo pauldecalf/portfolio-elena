@@ -1,9 +1,21 @@
 import React from "react";
 import BentoBox from "../bentoBox";
+import { useTab } from "@/providers/tabContext";
 
 export const LinkedinBox = () => {
+  const { activeTabIndex } = useTab();
   return (
-    <BentoBox className="group flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out">
+    <BentoBox
+      className={`group flex flex-col justify-center p-5 md:col-span-2 row-span-2 row-start-10 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out 
+    ${
+      activeTabIndex === 1
+        ? "md:col-start-1 md:row-start-4"
+        : activeTabIndex === 2
+        ? "opacity-50 pointer-events-none md:col-start-1 md:row-start-4"
+        : "md:col-start-1 md:row-start-4"
+    }
+    `}
+    >
       <a href="https://www.linkedin.com/in/ferreira-elena/" target="_blank">
         <div className="flex justify-center items-center">
           <svg

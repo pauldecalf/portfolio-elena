@@ -2,12 +2,18 @@ import React from "react";
 import BentoBox from "../bentoBox";
 import { FolderIcon } from "@heroicons/react/24/outline";
 import { useScopedI18n } from "@/locales/client";
+import { useTab } from "@/providers/tabContext";
 
 export const Project4Box = () => {
   const project_T = useScopedI18n("project");
+  const { activeTabIndex } = useTab();
 
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2 h-full">
+    <BentoBox
+      className={`flex flex-col justify-center p-5 md:col-span-6 row-span-6 md:col-start-7 row-start-52 md:row-start-16 h-full
+        ${activeTabIndex === 1 ? "opacity-50 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
+    `}
+    >
       <div className="mb-4">
         <a href="https://github.com/ElenaFerreira/WaveChatWebsite" target="_blank">
           <img

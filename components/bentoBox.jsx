@@ -1,6 +1,6 @@
 import React from "react";
 
-const BentoBox = ({ children, className = "", colSpan = 1, rowSpan = 1, onClick = null }) => {
+const BentoBox = ({ children, className = "", onClick = null }) => {
   return (
     <div
       className={`
@@ -11,9 +11,8 @@ const BentoBox = ({ children, className = "", colSpan = 1, rowSpan = 1, onClick 
         rounded-3xl shadow-md 
         transition-all duration-300 ease-in-out
         z-10
+        col-span-12
         ${className}
-        ${colSpan > 1 ? `md:col-span-${colSpan}` : ""}
-        ${rowSpan > 1 ? `md:row-span-${rowSpan}` : ""}
       `}
       onClick={onClick}
     >

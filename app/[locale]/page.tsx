@@ -37,52 +37,23 @@ export default function Home() {
     <div className="min-h-screen flex flex-col w-full justify-start items-center">
       <NavBar />
 
-      <main className="w-11/12 max-w-6xl py-6">
-        {/* Première section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-          <ProfileBox />
-
-          <div className="lg:col-span-2 md:col-span-2 flex flex-col gap-4">
-            <BannerBox />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <MapBox />
-
-              <div className="flex flex-col h-full justify-between gap-4">
-                <ResumeBox />
-                <ThemeToggleBox />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Deuxième section */}
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
-          <div className="flex flex-col h-full justify-between gap-4">
-            <LinkedinBox />
-            <GithubBox />
-            <InstaBox />
-          </div>
-
-          <div className="flex flex-col h-full justify-between gap-4 md:col-span-2 lg:col-span-2">
-            <SkillsBox />
-            <MailBox />
-          </div>
-
-          <div className="flex flex-col h-full justify-between gap-4 md:col-span-3 lg:col-span-3">
-            <ExperienceBox />
-          </div>
-        </div>
-
-        {/* Troisième section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6-4">
-          <Project1Box />
-          <Project2Box />
-          <Project5Box />
-          <Project3Box />
-          <Project4Box />
-        </div>
+      <main className="w-11/12 max-w-6xl py-6 grid grid-cols-12 gap-4">
+        <ProfileBox />
+        <BannerBox />
+        <MapBox />
+        <ResumeBox />
+        <ThemeToggleBox />
+        <LinkedinBox />
+        <GithubBox />
+        <InstaBox />
+        <SkillsBox />
+        <MailBox />
+        <ExperienceBox />
+        <Project1Box />
+        <Project2Box />
+        <Project5Box />
+        <Project3Box />
+        <Project4Box />
       </main>
     </div>
   );

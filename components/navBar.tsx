@@ -3,17 +3,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { LanguageSelect } from "./languageSelect";
 import { useScopedI18n } from "@/locales/client";
+import { useTab } from "@/providers/tabContext";
 
 export default function NavBar() {
   // Espace commentaire pour Loris esclave qui m'aide
 
   const menu_T = useScopedI18n("menu");
   const menuItems = [menu_T("all"), menu_T("about"), menu_T("work")];
-
-  const savedTab = localStorage.getItem("activeTabIndex");
-  const initialTabIndex = savedTab ? parseInt(savedTab, 10) : 0;
-
-  const [activeTabIndex, setActiveTabIndex] = useState(initialTabIndex);
+  const { activeTabIndex, setActiveTabIndex } = useTab();
   const [highlightStyle, setHighlightStyle] = useState({});
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -28,10 +25,6 @@ export default function NavBar() {
         });
       }
     }
-  }, [activeTabIndex]);
-
-  useEffect(() => {
-    localStorage.setItem("activeTabIndex", activeTabIndex.toString());
   }, [activeTabIndex]);
 
   return (

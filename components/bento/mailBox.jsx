@@ -1,9 +1,15 @@
 import React from "react";
 import BentoBox from "../bentoBox";
+import { useTab } from "@/providers/tabContext";
 
 export const MailBox = () => {
+  const { activeTabIndex } = useTab();
+
   return (
-    <BentoBox className="group flex flex-col justify-center p-5 md:col-span-1 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out">
+    <BentoBox
+      className={`group flex flex-col justify-center p-5 md:col-span-4 row-span-2 md:col-start-3 row-start-16 md:row-start-8 hover:shadow-lg hover:scale-[1.02] cursor-pointer transition-all duration-300 ease-out  
+        ${activeTabIndex === 1 ? "" : activeTabIndex === 2 ? "opacity-50 pointer-events-none" : ""}`}
+    >
       <a href="mailto:elena.lacroixferreira@gmail.com">
         <div className="flex justify-center items-center">
           <svg

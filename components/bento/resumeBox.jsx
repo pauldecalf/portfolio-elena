@@ -8,7 +8,7 @@ export const ResumeBox = () => {
   const resume_T = useScopedI18n("resume");
 
   return (
-    <BentoBox className="flex flex-col justify-center p-5 md:col-span-2">
+    <BentoBox className="flex flex-col justify-center p-5 md:col-span-3 row-span-1 md:col-start-10 row-start-7 md:row-start-2">
       <div className="flex justify-between items-center">
         <div className="mr-4">
           <p className="text-sm text-subtitle uppercase">{resume_T("date")}</p>
