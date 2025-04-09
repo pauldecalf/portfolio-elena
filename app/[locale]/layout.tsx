@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/providers/theme-provider";
 import ParticlesBackground from "@/components/particlesBackground";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
@@ -51,6 +52,7 @@ export default async function RootLayout({
           <Providers locale={resolvedParams.locale}>{children}</Providers>
         </ThemeProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
