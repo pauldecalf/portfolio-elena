@@ -9,8 +9,11 @@ export { MailBox } from "./mailBox";
 export { InstaBox } from "./instaBox";
 export { SkillsBox } from "./skillsBox";
 export { ExperienceBox } from "./experienceBox";
-export { Project1Box } from "./project1Box";
-export { Project2Box } from "./project2Box";
-export { Project3Box } from "./project3Box";
-export { Project4Box } from "./project4Box";
-export { Project5Box } from "./project5Box";
+
+export { LbfBox } from "./project/lbfBox";
+export { UnityBox } from "./project/unityBox";
+export { WebpizzaBox } from "./project/webpizzaBox";
+export { WaveChatBox } from "./project/waveChatBox";
+export { PeppersoftBox } from "./project/peppersoftBox";
+export { EuresisBox } from "./project/euresisBox";
+export { RePairBox } from "./project/rePairBox";

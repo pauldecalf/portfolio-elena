@@ -32,10 +32,13 @@ export default {
 
   project: {
     project_at: "PROJET À",
+    project_for: "PROJET POUR",
     university_project: "Projet Universitaire",
     project1: "Site web Boulangers du Grand Paris",
     project2: "Site web projet Unity",
     project5: "Plateforme en SaaS Peppersoft",
+    project6: "Site web Euresis",
+    project7: "PWA pour Refashion",
   },
 
   menu: {

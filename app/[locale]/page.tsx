@@ -14,11 +14,13 @@ import {
   SkillsBox,
   InstaBox,
   ExperienceBox,
-  Project1Box,
-  Project2Box,
-  Project3Box,
-  Project4Box,
-  Project5Box,
+  LbfBox,
+  UnityBox,
+  WebpizzaBox,
+  WaveChatBox,
+  PeppersoftBox,
+  EuresisBox,
+  RePairBox,
 } from "@/components/bento";
 
 export default function Home() {
@@ -49,11 +51,14 @@ export default function Home() {
         <SkillsBox />
         <MailBox />
         <ExperienceBox />
-        <Project1Box />
-        <Project2Box />
-        <Project5Box />
-        <Project3Box />
-        <Project4Box />
+
+        <LbfBox />
+        <UnityBox />
+        <PeppersoftBox />
+        <WebpizzaBox />
+        <WaveChatBox />
+        <EuresisBox />
+        <RePairBox />
       </main>
     </div>
   );
