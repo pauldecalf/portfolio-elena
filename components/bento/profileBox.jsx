@@ -22,7 +22,7 @@ export const ProfileBox = () => {
             width={110}
             height={110}
           />
-          <div className="absolute bottom-1.5 right-1.5 size-4 bg-[#00cb0e] rounded-full flex justify-center items-center animation-pulser"></div>
+          <div className="absolute bottom-1.5 right-1.5 size-4 bg-badge rounded-full flex justify-center items-center animation-pulser"></div>
         </div>
 
         <div>

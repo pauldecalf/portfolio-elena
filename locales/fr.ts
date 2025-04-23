@@ -39,6 +39,7 @@ export default {
     project5: "Plateforme en SaaS Peppersoft",
     project6: "Site web Euresis",
     project7: "PWA pour Refashion",
+    badge: "Nouveau",
   },
 
   menu: {

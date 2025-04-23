@@ -23,6 +23,16 @@ import {
   RePairBox,
 } from "@/components/bento";
 
+const projects = [
+  <LbfBox key="lbf" />,
+  <EuresisBox key="euresis" />,
+  <RePairBox key="repair" />,
+  <UnityBox key="unity" />,
+  <PeppersoftBox key="peppersoft" />,
+  <WebpizzaBox key="webpizza" />,
+  <WaveChatBox key="wavechat" />,
+];
+
 export default function Home() {
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -36,7 +46,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col w-full justify-start items-center">
+    <div className="relative z-10 min-h-screen flex flex-col w-full justify-start items-center">
       <NavBar />
 
       <main className="w-11/12 max-w-6xl py-6 grid grid-cols-12 gap-4">
@@ -52,13 +62,20 @@ export default function Home() {
         <MailBox />
         <ExperienceBox />
 
-        <LbfBox />
+        {/* <LbfBox />
         <UnityBox />
         <PeppersoftBox />
         <WebpizzaBox />
         <WaveChatBox />
         <EuresisBox />
-        <RePairBox />
+        <RePairBox /> */}
+        <div className="col-span-12 grid grid-cols-12 gap-4 row-start-[28] md:row-start-auto">
+          {projects.map((Project, i) => (
+            <div key={i} className="col-span-12 md:col-span-6">
+              {Project}
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   );

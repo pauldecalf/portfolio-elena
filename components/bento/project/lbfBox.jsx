@@ -10,7 +10,7 @@ export const LbfBox = () => {
 
   return (
     <BentoBox
-      className={`flex flex-col justify-center p-5 md:col-span-6 row-span-6 md:col-start-1 row-start-28 md:row-start-10 h-full
+      className={`flex flex-col justify-center p-5 h-full
         ${activeTabIndex === 1 ? "opacity-40 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
       `}
     >

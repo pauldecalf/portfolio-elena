@@ -3,6 +3,7 @@ import BentoBox from "../../bentoBox";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import { useScopedI18n } from "@/locales/client";
 import { useTab } from "@/providers/tabContext";
+import NewBadge from "@/components/NewBadge";
 
 export const RePairBox = () => {
   const project_T = useScopedI18n("project");
@@ -10,7 +11,7 @@ export const RePairBox = () => {
 
   return (
     <BentoBox
-      className={`flex flex-col justify-center p-5 md:col-span-6 row-span-6 md:col-start-1 row-start-46 md:row-start-22 h-full
+      className={`flex flex-col justify-center p-5 h-full
         ${activeTabIndex === 1 ? "opacity-40 pointer-events-none" : activeTabIndex === 2 ? "" : ""}
       `}
     >
@@ -23,10 +24,13 @@ export const RePairBox = () => {
           />
         </a>
 
-        <div className="flex items-center mb-2">
-          <p className="text-sm text-subtitle uppercase">{project_T("project_for")}</p>
-          <img src="/images/project/refashion.svg" alt="Euresis Logo" className="w-15 h-5 mx-2" />
-          {/* <p className="text-sm text-subtitle uppercase">Refashion</p> */}
+        <div className="flex justify-between items-center mb-2">
+          <div className="flex items-center">
+            <p className="text-sm text-subtitle uppercase">{project_T("project_for")}</p>
+            <img src="/images/project/refashion.svg" alt="Euresis Logo" className="w-15 h-5 mx-2" />
+            {/* <p className="text-sm text-subtitle uppercase">Refashion</p> */}
+          </div>
+          <NewBadge />
         </div>
 
         <div className="flex items-center">
