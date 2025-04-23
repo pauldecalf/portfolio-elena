@@ -12,7 +12,7 @@ import {
   GithubBox,
   MailBox,
   SkillsBox,
-  InstaBox,
+  MaltBox,
   ExperienceBox,
   LbfBox,
   UnityBox,
@@ -57,7 +57,7 @@ export default function Home() {
         <ThemeToggleBox />
         <LinkedinBox />
         <GithubBox />
-        <InstaBox />
+        <MaltBox />
         <SkillsBox />
         <MailBox />
         <ExperienceBox />

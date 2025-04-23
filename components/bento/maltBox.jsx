@@ -2,7 +2,7 @@ import React from "react";
 import BentoBox from "../bentoBox";
 import { useTab } from "@/providers/tabContext";
 
-export const InstaBox = () => {
+export const MaltBox = () => {
   const { activeTabIndex } = useTab();
 
   return (

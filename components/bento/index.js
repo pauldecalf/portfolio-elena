@@ -6,7 +6,7 @@ export { BannerBox } from "./bannerBox";
 export { LinkedinBox } from "./linkedinBox";
 export { GithubBox } from "./githubBox";
 export { MailBox } from "./mailBox";
-export { InstaBox } from "./instaBox";
+export { MaltBox } from "./maltBox";
 export { SkillsBox } from "./skillsBox";
 export { ExperienceBox } from "./experienceBox";
 
