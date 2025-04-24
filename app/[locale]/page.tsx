@@ -29,8 +29,8 @@ const projects = [
   <RePairBox key="repair" />,
   <UnityBox key="unity" />,
   <PeppersoftBox key="peppersoft" />,
-  <WebpizzaBox key="webpizza" />,
   <WaveChatBox key="wavechat" />,
+  <WebpizzaBox key="webpizza" />,
 ];
 
 export default function Home() {
@@ -62,13 +62,6 @@ export default function Home() {
         <MailBox />
         <ExperienceBox />
 
-        {/* <LbfBox />
-        <UnityBox />
-        <PeppersoftBox />
-        <WebpizzaBox />
-        <WaveChatBox />
-        <EuresisBox />
-        <RePairBox /> */}
         <div className="col-span-12 grid grid-cols-12 gap-4 row-start-[28] md:row-start-auto">
           {projects.map((Project, i) => (
             <div key={i} className="col-span-12 md:col-span-6">

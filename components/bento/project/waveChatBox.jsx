@@ -17,7 +17,7 @@ export const WaveChatBox = () => {
       <div className="mb-4">
         <a href="https://github.com/ElenaFerreira/WaveChatWebsite" target="_blank">
           <img
-            src="/images/project/project4.png"
+            src="/images/project/project4bis.png"
             alt="Project image"
             className="w-full h-auto mb-4 object-cover object-top aspect-video rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
           />
