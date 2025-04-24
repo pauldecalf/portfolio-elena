@@ -5,6 +5,7 @@ export default {
     about:
       "Passionnée par le développement web et la création d'interfaces utilisateur modernes. Toujours en quête de nouveaux défis techniques. Recherche une alternance.",
   },
+
   banner: {
     portfolio_1: "MON",
     portfolio_2: "PORTFOLIO",
@@ -40,6 +41,7 @@ export default {
     project6: "Site web Euresis",
     project7: "PWA pour Refashion",
     badge: "Nouveau",
+    cursor: "Bientôt disponible",
   },
 
   menu: {

@@ -5,6 +5,7 @@ export default {
     about:
       "Passionate about web development and creating modern user interfaces. Always seeking new technical challenges. Looking for an apprenticeship.",
   },
+
   banner: {
     portfolio_1: "PERSONAL",
     portfolio_2: "PORTFOLIO",
@@ -16,6 +17,7 @@ export default {
     date: "2025 CV",
     resume: "Resume",
   },
+
   experience: {
     years: "2 YEARS OF",
     experience: "EXPERIENCE",
@@ -39,6 +41,7 @@ export default {
     project6: "Website for Euresis",
     project7: "PWA for Refashion",
     badge: "New",
+    cursor: "Coming soon",
   },
 
   menu: {

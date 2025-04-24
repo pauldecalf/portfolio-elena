@@ -24,9 +24,9 @@ import {
 } from "@/components/bento";
 
 const projects = [
-  <LbfBox key="lbf" />,
   <EuresisBox key="euresis" />,
   <RePairBox key="repair" />,
+  <LbfBox key="lbf" />,
   <UnityBox key="unity" />,
   <PeppersoftBox key="peppersoft" />,
   <WaveChatBox key="wavechat" />,

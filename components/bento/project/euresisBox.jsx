@@ -43,7 +43,7 @@ export const EuresisBox = () => {
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {["React", "Next.js", "Tailwind CSS", "Responsive", "Framer Motion"].map((label, index) => (
+        {["React", "Next.js", "Typescript", "Tailwind CSS", "API", "Responsive"].map((label, index) => (
           <span key={index} className="px-3 py-1 text-xs text-white bg-label rounded-full">
             {label}
           </span>

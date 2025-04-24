@@ -16,11 +16,11 @@ export const RePairBox = () => {
       `}
     >
       <div className="mb-4">
-        <a href="https://hackathon-refashion.vercel.app/" target="_blank">
+        <a target="_blank">
           <img
             src="/images/project/project7.png"
             alt="Project image"
-            className="w-full h-auto mb-4 object-cover object-top aspect-video rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
+            className="w-full h-auto mb-4 object-cover object-top aspect-video rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-tooltip transition-all duration-300 ease-in-out"
           />
         </a>
 
@@ -35,8 +35,8 @@ export const RePairBox = () => {
 
         <div className="flex items-center">
           <h2 className="text-2xl font-bold mb-1 text-title">{project_T("project7")}</h2>
-          <a href="https://hackathon-refashion.vercel.app/" target="_blank" className="ml-2">
-            <LinkIcon className="size-6 text-icon-color hover:text-icon-hover duration-400 transition-all" />
+          <a target="_blank" className="ml-2">
+            <LinkIcon className="size-6 text-icon-color cursor-tooltip hover:text-icon-hover duration-400 transition-all" />
           </a>
         </div>
       </div>

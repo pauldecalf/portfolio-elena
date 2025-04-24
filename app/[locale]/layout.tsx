@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import ParticlesBackground from "@/components/particlesBackground";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
@@ -49,7 +50,10 @@ export default async function RootLayout({
       <body className="relative w-full h-full min-h-screen bg-grid">
         <ParticlesBackground />
         <ThemeProvider>
-          <Providers locale={resolvedParams.locale}>{children}</Providers>
+          <Providers locale={resolvedParams.locale}>
+            <CustomCursor />
+            {children}
+          </Providers>
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />
