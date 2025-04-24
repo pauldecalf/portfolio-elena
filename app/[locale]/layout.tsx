@@ -9,15 +9,15 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Elena Ferreira - Portfolio",
   description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
-  authors: [{ name: "Elena Ferreira", url: "https://elena-ferreira.vercel.app" }],
+  authors: [{ name: "Elena Ferreira", url: "https://www.elenaferreira.fr" }],
   openGraph: {
     title: "Elena Ferreira - Portfolio",
     description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
-    url: "https://elena-ferreira.vercel.app",
+    url: "https://www.elenaferreira.fr",
     type: "website",
     images: [
       {
-        url: "https://elena-ferreira.vercel.app/images/website.png",
+        url: "https://www.elenaferreira.fr/images/website.png",
         width: 3024,
         height: 1492,
         alt: "Elena Ferreira - Portfolio",
