@@ -8,10 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Elena Ferreira",
-    template: "%s | Portfolio",
-  },
+  title: "Elena Ferreira - Portfolio",
   description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
   authors: [{ name: "Elena Ferreira", url: "https://www.elenaferreira.fr" }],
   openGraph: {
