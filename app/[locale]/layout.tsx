@@ -8,7 +8,10 @@ import { Analytics } from "@vercel/analytics/react";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Elena Ferreira - Portfolio",
+  title: {
+    default: "Elena Ferreira",
+    template: "%s | Portfolio",
+  },
   description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
   authors: [{ name: "Elena Ferreira", url: "https://www.elenaferreira.fr" }],
   openGraph: {
@@ -16,6 +19,8 @@ export const metadata: Metadata = {
     description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
     url: "https://www.elenaferreira.fr",
     type: "website",
+    locale: "en_US",
+    siteName: "Elena Ferreira - Portfolio",
     images: [
       {
         url: "https://www.elenaferreira.fr/images/website.png",
@@ -24,6 +29,23 @@ export const metadata: Metadata = {
         alt: "Elena Ferreira - Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elena Ferreira - Portfolio",
+    description: "Elena's portfolio, a Front-end Developer based in Paris, France.",
+    images: ["https://www.elenaferreira.fr/images/website.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
