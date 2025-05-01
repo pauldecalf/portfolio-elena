@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     url: "https://www.elenaferreira.fr",
     type: "website",
     locale: "en_US",
-    siteName: "Elena Ferreira - Portfolio",
     images: [
       {
         url: "https://www.elenaferreira.fr/images/website.png",
