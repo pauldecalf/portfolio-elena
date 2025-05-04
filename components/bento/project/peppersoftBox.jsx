@@ -3,6 +3,7 @@ import BentoBox from "../../bentoBox";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import { useScopedI18n } from "@/locales/client";
 import { useTab } from "@/providers/tabContext";
+import Image from "next/image";
 
 export const PeppersoftBox = () => {
   const project_T = useScopedI18n("project");
@@ -16,16 +17,23 @@ export const PeppersoftBox = () => {
     >
       <div className="mb-4">
         <a href="https://www.peppersoft.fr/" target="_blank">
-          <img
-            src="/images/project/project5.png"
-            alt="Project image"
-            className="w-full h-auto mb-4 object-cover object-top aspect-video rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
-          />
+          <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden">
+            <Image
+              src="/images/project/project5.png"
+              alt="Project image"
+              fill
+              className="object-cover object-top hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={85}
+            />
+          </div>
         </a>
 
         <div className="flex items-center mb-2">
           <p className="text-sm text-subtitle uppercase">{project_T("project_at")}</p>
-          <img src="/images/project/marquetis.png" alt="Grafikmente Logo" className="size-5 mx-1" />
+          <div className="relative size-5 mx-1">
+            <Image src="/images/project/marquetis.png" alt="Grafikmente Logo" fill className="object-contain" />
+          </div>
           <p className="text-sm text-subtitle uppercase">MARQUETIS & CO</p>
         </div>
 

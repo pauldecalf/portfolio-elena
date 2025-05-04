@@ -3,6 +3,7 @@ import BentoBox from "../../bentoBox";
 import { FolderIcon } from "@heroicons/react/24/outline";
 import { useScopedI18n } from "@/locales/client";
 import { useTab } from "@/providers/tabContext";
+import Image from "next/image";
 
 export const WaveChatBox = () => {
   const project_T = useScopedI18n("project");
@@ -16,11 +17,16 @@ export const WaveChatBox = () => {
     >
       <div className="mb-4">
         <a href="https://github.com/ElenaFerreira/WaveChatWebsite" target="_blank">
-          <img
-            src="/images/project/project4.png"
-            alt="Project image"
-            className="w-full h-auto mb-4 object-cover object-top aspect-video rounded-lg hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
-          />
+          <div className="relative w-full aspect-video mb-4 rounded-lg overflow-hidden">
+            <Image
+              src="/images/project/project4.png"
+              alt="Project image"
+              fill
+              className="object-cover object-top hover:shadow-lg hover:scale-[1.01] cursor-pointer transition-all duration-300 ease-in-out"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={85}
+            />
+          </div>
         </a>
 
         <div className="flex items-center mb-2">
